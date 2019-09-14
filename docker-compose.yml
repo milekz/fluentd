@@ -1,0 +1,17 @@
+version: '3.7'
+
+services:
+  fluentd:
+    build: ./build
+    container_name: fluentd
+    network_mode : host
+    volumes:
+      - /docker/fluent/conf:/fluentd/etc
+    ports:
+      - "2055:2055"
+      - "2055:2055/udp"
+    logging:
+       driver: "json-file"
+       options:
+          max-file: "5"
+          max-size: "10m"
