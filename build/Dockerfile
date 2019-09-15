@@ -40,7 +40,8 @@ COPY entrypoint.sh /bin/
 ENV FLUENTD_CONF="fluent.conf"
 
 ENV LD_PRELOAD=""
-EXPOSE 24224 5140
+EXPOSE 2055/tcp
+EXPOSE 2055/udp
 
 
 USER fluent
