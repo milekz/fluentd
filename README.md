@@ -1,2 +1,2 @@
 # fluentd
-Fluentd + netflow in + elasticsearch out
+Fluentd => netflow in => geoip => elasticsearch out
